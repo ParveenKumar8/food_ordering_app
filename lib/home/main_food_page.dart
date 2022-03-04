@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:food_ordering_app/home/food_page_body.dart';
 import 'package:food_ordering_app/utils/app_colors.dart';
+import 'package:food_ordering_app/widgets/secondary_text.dart';
 import 'package:food_ordering_app/widgets/title_text.dart';
 
 class MainFoodPage extends StatelessWidget {
@@ -21,7 +23,15 @@ class MainFoodPage extends StatelessWidget {
                       text: "India",
                       color: AppColors.PRIMARY_COLOR,
                     ),
-                    Text("Punjab")
+                    Row(
+                      children: [
+                        SecondaryText(
+                          text: "Punjab",
+                          color: Colors.black54,
+                        ),
+                        const Icon(Icons.arrow_drop_down_rounded)
+                      ],
+                    )
                   ]),
                   Center(
                     child: Container(
@@ -38,6 +48,7 @@ class MainFoodPage extends StatelessWidget {
                   ),
                 ]),
           ),
+          const FoodPageBody(),
         ],
       ),
     );
