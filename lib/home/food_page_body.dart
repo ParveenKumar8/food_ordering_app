@@ -1,6 +1,7 @@
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:food_ordering_app/utils/app_colors.dart';
+import 'package:food_ordering_app/utils/dimensions.dart';
 import 'package:food_ordering_app/widgets/icon_and_text_widget.dart';
 import 'package:food_ordering_app/widgets/secondary_text.dart';
 import 'package:food_ordering_app/widgets/title_text.dart';
@@ -16,7 +17,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
   PageController pageController = PageController(viewportFraction: 0.85);
   var _currentPageValue = 0.0;
   final double _scaleFactor = 0.8;
-  final double heightContainer = 220.0;
+  final double heightContainer = Dimensions.PAGE_VIEW_CONTAINER;
 
   @override
   void initState() {
@@ -41,7 +42,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
       children: [
         Container(
           margin: const EdgeInsets.only(top: 10),
-          height: 320,
+          height: Dimensions.PAGE_VIEW_SECONDARY_CONTAINER,
           child: PageView.builder(
               controller: pageController,
               itemCount: 5,
