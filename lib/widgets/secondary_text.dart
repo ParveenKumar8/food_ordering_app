@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:food_ordering_app/utils/dimensions.dart';
 
 class SecondaryText extends StatelessWidget {
   Color? color;
-  final String text;
+  String text;
   double textSize;
   double textHeight;
 
@@ -10,7 +11,7 @@ class SecondaryText extends StatelessWidget {
     Key? key,
     this.color = const Color(0xFFccc7c5),
     required this.text,
-    this.textSize = 12.0,
+    this.textSize = 0,
     this.textHeight = 1.2,
   }) : super(key: key);
 
@@ -21,7 +22,7 @@ class SecondaryText extends StatelessWidget {
       style: TextStyle(
           color: color,
           fontFamily: 'Roboto',
-          fontSize: textSize,
+          fontSize: textSize == 0 ? Dimensions.FONT_12 : textSize,
           height: textHeight),
     );
   }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:food_ordering_app/home/main_food_page.dart';
+import 'package:food_ordering_app/pages/home/main_food_page.dart';
+
 import 'package:get/get.dart';
 
 void main() {
